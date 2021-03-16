@@ -1,0 +1,86 @@
+*,
+::after,
+::before {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+a {
+ text-decoration: none;
+}
+
+nav {
+ width: 100%;
+ height: 50px;
+ background-color: darkgray;
+ display: grid;
+ align-items: center;
+ justify-content: center;
+ letter-spacing: 2px;
+ font-size: 1.3rem;
+ font-weight: bold;
+}
+
+.nav-item {
+ display: inline;
+ padding: 5px;
+ margin: auto 5px;
+}
+
+.nav-item a {
+ color: black;
+}
+
+.nav-item a:hover {
+ color: white;
+ transition: all 0.3s;
+}
+
+.container {
+ width: 50%;
+ margin: auto;
+ position: absolute;
+ top: 50%;
+ right: 25%;
+ text-align: center;
+ background-color: whitesmoke;
+ padding: 10px 0;
+ border-radius: 4px;
+}
+
+.color-container {
+ margin: auto;
+ border: 1px solid whitesmoke;
+ text-align: center;
+ margin: 10px 30px;
+ padding: 5px 5px;
+ border-radius: 6px;
+ background-color: gray;
+ color: white;
+ font-size: 2rem;
+}
+
+.btn {
+ padding: 10px 20px;
+ border: 1px solid black;
+ border-radius: 4px;
+ font-weight: 700;
+ font-size: 1.2rem;
+ background: transparent;
+}
+
+.btn-change:hover {
+ background-color: seagreen;
+ cursor: pointer;
+ transition: ease .4s;
+ color: whitesmoke;
+}
+
+
+
+
+
+
+
+
