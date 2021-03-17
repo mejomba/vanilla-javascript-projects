@@ -58,7 +58,7 @@ nav {
  border-radius: 6px;
  background-color: gray;
  color: white;
- font-size: 2rem;
+ font-size: 1.3rem;
 }
 
 .btn {
@@ -66,7 +66,7 @@ nav {
  border: 1px solid black;
  border-radius: 4px;
  font-weight: 700;
- font-size: 1.2rem;
+ font-size: 1rem;
  background: transparent;
 }
 

@@ -1,0 +1,1 @@
+const myArray = ['red', 'green', 'rgba(150, 200, 70, 1)', '#45fe24'];
