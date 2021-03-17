@@ -1,0 +1,49 @@
+*,::before,::after {
+ margin: 0%;
+ padding: 0%;
+ box-sizing: border-box;
+}
+
+main {
+ display: grid;
+ min-height: 100vh;
+ place-items: center;
+ text-align: center;
+}
+
+h1 {
+ font-size: 3rem;
+}
+
+#value {
+ font-size: 5rem;
+ font-weight: 600;
+}
+
+.btn {
+ border: 1px solid black;
+ border-radius: 4px;
+ padding: 10px 20px;
+ background: transparent;
+ margin: 0 5px;
+ font-size: 2rem;
+ font-weight: 600;
+}
+
+.btn:hover {
+ background-color: wheat;
+ transition: ease-in-out .3s;
+ cursor: pointer;
+}
+
+.increase:hover {
+ background-color: greenyellow;
+}
+
+.reset:hover {
+ background-color: gainsboro;
+}
+
+.decrease:hover {
+ background-color: tomato;
+}
