@@ -23,6 +23,7 @@ h3 {
   letter-spacing: 0.25rem;
   line-height: 2;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 main {
@@ -33,6 +34,7 @@ main {
 .title {
   text-align: center;
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 .underline {
   width: 6rem;
@@ -85,6 +87,7 @@ main {
   color: rgb(134, 193, 212);
   font-weight: 700;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 #info {
