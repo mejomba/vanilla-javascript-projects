@@ -20,7 +20,6 @@ btns.forEach(function(btn) {
  btn.addEventListener('click', function(e) {
   e.currentTarget.classList.toggle('active');
   const answer = e.currentTarget.nextElementSibling;
-  // answer.classList.toggle('active');
   if (answer.style.height) {
    answer.style.height = null;
   } else {
