@@ -234,7 +234,7 @@ Modal
   display: grid;
   place-items: center;
   position: relative;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
 }
 .close-btn {
   position: absolute;
