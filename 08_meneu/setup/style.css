@@ -1,0 +1,134 @@
+*,
+::after,
+::before {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(233, 238, 238);
+  direction: rtl;
+}
+.title {
+  display: grid;
+  place-items: center;
+  color: rgb(196, 134, 52);
+  margin-top: 4rem;
+  font-weight: 600;
+}
+.underline {
+  width: 6rem;
+  height: 4px;
+  margin: 0.75rem 0;
+  border-radius: 30%;
+  background-color: cadetblue;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  /* background: transparent; */
+  color: rgb(196, 134, 52);
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.25rem 0.75rem;
+  margin: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-color: rgb(197, 192, 192);
+  border-radius: 0.25rem;
+}
+.btn:hover {
+  background-color: rgb(116, 113, 113);
+  color: white;
+  transition: all 0.3s;
+}
+.center-section {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  gap: 3rem 2rem;
+  margin: 3rem auto;
+  width: 90vw;
+}
+.menu-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.menu-item img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgba(255, 169, 71, 0.793);
+  border-radius: 0.5rem;
+}
+.info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'price title'
+    'desc desc';
+  margin-left: 0.75rem;
+}
+.info .p-title {
+  margin: 0.25rem auto;
+  grid-area: title;
+}
+.price {
+  color: rgb(136, 81, 14);
+  font-size: 1.2rem;
+  padding: 0.75rem;
+  grid-area: price;
+}
+.desc {
+  grid-area: desc;
+  border-top: 1px solid black;
+  padding-top: 0.75rem;
+}
+.btn-link {
+  background-color: rgb(107, 209, 12);
+  width: 4rem;
+  height: 2.5rem;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  margin-top: 0.75rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease-out;
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(26, 25, 18);
+}
+.btn-link:hover {
+  background-color: rgb(73, 184, 21);
+  color: white;
+  transition: all 0.3s ease-out;
+}
+@media screen and (min-width: 800px) {
+  .center-section {
+    grid-template-columns: auto auto;
+  }
+  .info {
+    display: grid;
+    grid-template-areas:
+      'title title'
+      'price price'
+      'desc desc';
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .center-section {
+    grid-template-columns: auto auto auto;
+  }
+  .info {
+    display: grid;
+    grid-template-areas:
+      'title title'
+      'price price'
+      'desc desc';
+  }
+}
