@@ -85,36 +85,46 @@ const centerSection = document.querySelector('.center-section');
 const btns = document.querySelectorAll('.btn');
 
 window.addEventListener('DOMContentLoaded', function() {
-  displayMenuItems(menu)
+  displayMenuItems(menu);
 })
+
+function displayMenuItems(menuItems) {
+  let displayMenu = menuItems.map(function(item) {
+    return `<article class="menu-item">
+     <img src=${item.img} class="productImage" alt=${item.name}>
+     <div class="info">
+      <h4 class="p-title">
+      ${item.name}
+      </h4>
+      <h5 class="price">
+       ${item.price} <span> تومان</span>
+      </h5>
+      <p class="desc">
+       ${item.desc}
+      </p>
+      <a href="#" class="btn-link">ادامه</a>
+     </div>
+    </article>`
+  });
+  displayMenu = displayMenu.join('');
+  centerSection.innerHTML = displayMenu;
+}
 
 btns.forEach(function(btn) {
   btn.addEventListener('click', function(e) {
+    // console.log(e.currentTarget.dataset.id);
     const category = e.currentTarget.dataset.category;
     const categoryMenu = menu.filter(function(item) {
       if (item.category === category) {
         return item
       }
     });
+    console.log(categoryMenu);
     if (category === 'all') {
-      displayMenuItems(menu);
+      displayMenuItems(menu)
     } else {
-      displayMenuItems(categoryMenu);
-    }
+      displayMenuItems(categoryMenu)
+    }    
+    
   })
 })
-
-function displayMenuItems(menuItems) {
-  let displayItem = menuItems.map(function(item) {
-    return `<article class="menu-item">
-      <img src=${item.img} alt=${item.name}>
-      <div class="info">
-        <h4 class="p-title">${item.name}</h4>
-        <h5 class="price">${item.price} <span>تومان</span></h5>
-        <p class="desc">${item.desc}</p>
-      </div>
-    </article>`
-  });
-  displayItem = displayItem.join('');
-  centerSection.innerHTML = displayItem;
-}
