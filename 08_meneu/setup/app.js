@@ -1,7 +1,7 @@
 const menu = [
  {
   id:1,
-  category: 'laptop',
+  category: 'لپتاپ',
   name: 'لپ تاپ 15 اینچی لنوو مدل Ideapad 330 - E' ,
   price: '۸,۹۹۰,۰۰۰',
   img: "./image/laptop1.jpg",
@@ -10,7 +10,7 @@ const menu = [
 
   {
   id:2,
-  category: 'laptop',
+  category: 'لپتاپ',
   name: 'لپ تاپ 15.6 اینچی ایسوس مدل VivoBook S533JQ - A' ,
   price: '۲۸,۸۰۰,۰۰۰',
   img: "./image/laptop2.jpg",
@@ -19,7 +19,7 @@ const menu = [
 
   {
   id:3,
-  category: 'laptop',
+  category: 'لپتاپ',
   name: 'لپ تاپ 15.6 اینچی اچ پی مدل Pavilion 15-dk0056wm' ,
   price: '۲۵,۴۰۰,۰۰۰',
   img: "./image/laptop3.jpg",
@@ -28,7 +28,7 @@ const menu = [
 
   {
   id:4,
-  category: 'phone',
+  category: 'موبایل',
   name: 'گوشی موبایل هوآوی مدل Y7a PPA-LX2' ,
   price: '۴,۳۰۰,۰۰۰',
   img: "./image/phone.jpg",
@@ -37,7 +37,7 @@ const menu = [
 
   {
   id:5,
-  category: 'phone',
+  category: 'موبایل',
   name: 'گوشی موبایل شیائومی مدل POCO M3 M2010J19CG' ,
   price: '۴,۵۰۰,۰۰۰',
   img: "./image/phone2.jpg",
@@ -46,7 +46,7 @@ const menu = [
 
   {
   id:6,
-  category: 'phone',
+  category: 'موبایل',
   name: 'گوشی موبایل سامسونگ مدل Galaxy A31 SM-A315F/DS' ,
   price: '۵,۴۰۰,۰۰۰',
   img: "./image/phone3.jpg",
@@ -55,7 +55,7 @@ const menu = [
 
   {
   id:7,
-  category: 'camera',
+  category: 'دوربین',
   name: 'دوربین دیجیتال کانن مدل EOS 4000D' ,
   price: '۵,۲۰۰,۰۰۰',
   img: "./image/camera1.jpg",
@@ -64,7 +64,7 @@ const menu = [
 
   {
   id:8,
-  category: 'camera',
+  category: 'دوربین',
   name: 'دوربین دیجیتال سامسونگ مدل ST69' ,
   price: '۱,۵۰۰,۰۰۰',
   img: "./image/camera2.jpg",
@@ -73,7 +73,7 @@ const menu = [
 
   {
   id:9,
-  category: 'camera',
+  category: 'دوربین',
   name: 'دوربین دیجیتال سامسونگ مدل WB30F' ,
   price: '۲,۳۰۰,۰۰۰',
   img: "./image/camera3.jpg",
@@ -81,50 +81,3 @@ const menu = [
   }, 
 ]
 
-const centerSection = document.querySelector('.center-section');
-const btns = document.querySelectorAll('.btn');
-
-window.addEventListener('DOMContentLoaded', function() {
-  displayMenuItems(menu);
-})
-
-function displayMenuItems(menuItems) {
-  let displayMenu = menuItems.map(function(item) {
-    return `<article class="menu-item">
-     <img src=${item.img} class="productImage" alt=${item.name}>
-     <div class="info">
-      <h4 class="p-title">
-      ${item.name}
-      </h4>
-      <h5 class="price">
-       ${item.price} <span> تومان</span>
-      </h5>
-      <p class="desc">
-       ${item.desc}
-      </p>
-      <a href="#" class="btn-link">ادامه</a>
-     </div>
-    </article>`
-  });
-  displayMenu = displayMenu.join('');
-  centerSection.innerHTML = displayMenu;
-}
-
-btns.forEach(function(btn) {
-  btn.addEventListener('click', function(e) {
-    // console.log(e.currentTarget.dataset.id);
-    const category = e.currentTarget.dataset.category;
-    const categoryMenu = menu.filter(function(item) {
-      if (item.category === category) {
-        return item
-      }
-    });
-    console.log(categoryMenu);
-    if (category === 'all') {
-      displayMenuItems(menu)
-    } else {
-      displayMenuItems(categoryMenu)
-    }    
-    
-  })
-})
