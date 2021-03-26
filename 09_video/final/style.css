@@ -50,7 +50,6 @@ header::after {
   position: absolute;
   top: 90%;
   left: 10%;
-  background-color: rgb(255, 255, 255);
   border: none;
   background: transparent;
   border-radius: 0.5rem;
