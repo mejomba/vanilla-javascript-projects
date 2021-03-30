@@ -70,7 +70,7 @@ html {
   box-sizing: border-box;
 }
 body {
-  font-family: var(--ff-secondary);
+  /* font-family: var(--ff-secondary); */
   background: var(--clr-grey-10);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -300,8 +300,7 @@ nav {
 /* hero */
 header {
   min-height: 100vh;
-  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
-    url(./hero-bcg.jpeg) center/cover no-repeat;
+  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7));
 }
 .banner {
   min-height: 100vh;
@@ -327,14 +326,11 @@ header {
 /* sections and title */
 .title h2 {
   text-align: center;
-  text-transform: uppercase;
 }
-.title span {
-  color: var(--clr-secondary);
-}
+
 #about,
 #services,
-#tours {
+#contact {
   height: 80vh;
 }
 #services {
@@ -347,12 +343,9 @@ footer {
 footer p {
   color: var(--clr-white);
   text-align: center;
-  text-transform: capitalize;
-  letter-spacing: var(--spacing);
-  margin-bottom: 0;
 }
 
-.top-link {
+.go-top {
   font-size: 1.25rem;
   position: fixed;
   bottom: 3rem;
@@ -364,7 +357,7 @@ footer p {
   place-items: center;
   border-radius: var(--radius);
   color: var(--clr-white);
-  animation: bounce 2s ease-in-out infinite;
+  animation: bounce 1s ease-in-out infinite;
   visibility: hidden;
   z-index: -100;
 }
@@ -378,7 +371,7 @@ footer p {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
