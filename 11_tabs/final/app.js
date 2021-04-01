@@ -4,8 +4,9 @@ const content = document.querySelectorAll('.content');
 
 about.addEventListener('click', function(e) {
  const id = e.target.dataset.id;
+ 
+if (id) {
  const element = document.getElementById(id);
-
  btns.forEach(function(btn) {
   btn.classList.remove('active');
  });
@@ -15,5 +16,5 @@ about.addEventListener('click', function(e) {
   item.classList.remove('active');
  });
  element.classList.add('active');
- 
+}
 });
