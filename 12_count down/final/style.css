@@ -90,7 +90,6 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
@@ -188,7 +187,18 @@ main {
   width: 100vw;
   height: 100vh;
 }
-
+.banner {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  color: whitesmoke;
+  background-color: rgba(50, 50, 100, 0.4);
+  padding: 1.5rem 2rem;
+  border-radius: 0.75rem;
+  font-size: 2rem;
+  z-index: 100;
+}
 /*
 =============== 
 Countdown Timer
@@ -243,4 +253,15 @@ Countdown Timer
   .timer h4:not(.expired) {
     font-size: 1rem;
   }
+}
+.bomb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.5rem 2rem;
+  border-radius: 0.75rem;
+  font-size: 2rem;
+  z-index: 100;
+  /* visibility: hidden; */
 }
