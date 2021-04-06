@@ -1,6 +1,6 @@
 const timer = document.querySelectorAll('.single-timer h4');
-const futureTime = new Date('2021', '3', '6', '15', '57', '40');
-const bomb = document.querySelector('.timer')
+const futureTime = new Date('2021', '3', '6', '18', '9', '55');
+const expire = document.querySelector('.timer')
 
 function format(x) {
  if (x < 10) {
@@ -24,13 +24,14 @@ console.log(t);
 
  const value = [days, hours, minuets, seconds]
  timer.forEach(function(item, idx) {
-  console.log(format(value[idx]));
   item.innerHTML = format(value[idx])
  })
   
  if (t <= 1000) {
+  expire.innerHTML = `<h3 class="expire">افتتاح شد</h3>`
   clearInterval(countDown);
  }
 }
-setTimer()
+
 let countDown = setInterval(setTimer, 1000);
+setTimer()
