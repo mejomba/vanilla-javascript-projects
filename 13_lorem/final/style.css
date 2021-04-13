@@ -47,7 +47,7 @@ Variables
   --ff-secondary: 'Open Sans', sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
-  --radius: 0.5rem;
+  --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
@@ -210,4 +210,13 @@ button {
 }
 .lorem-text {
   margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+#type-id {
+  padding: 0.25rem 0.5rem;
+  width: 6rem;
+  border-radius: var(--radius);
+  border: none;
+  font-size: 1.25rem;
 }

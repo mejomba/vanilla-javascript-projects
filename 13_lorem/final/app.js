@@ -34,7 +34,7 @@ function getParagraph (x, arr) {
  let tempText = []
  if (isNaN(x) || x === 1) {
   const paragraphLen = Math.max(3, Math.floor(Math.random() * 8))
-  return arr.slice(0, paragraphLen).join('')  
+  return `<p>${arr.slice(0, paragraphLen)}</p>`  
  } else {
    for (let i=0; i<x; i++) {
     const paragraphLen = Math.max(3, Math.floor(Math.random() * 8))
