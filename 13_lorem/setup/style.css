@@ -213,7 +213,7 @@ button {
   font-size: 1.2rem;
   font-weight: 700;
 }
-#type-id {
+#type {
   padding: 0.25rem 0.5rem;
   width: 6rem;
   border-radius: var(--radius);
