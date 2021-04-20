@@ -35,6 +35,7 @@ main {
   text-align: center;
   width: 50vw;
   max-width: 600px;
+  margin: 2rem auto;
   border-radius: 0.2rem;
   box-shadow: var(--light-shadow);
   transition: var(--transition);
@@ -47,6 +48,10 @@ main {
   border-radius: 0.2rem;
   cursor: pointer;
   border: none;
+}
+
+.todo-container {
+  /* visibility: hidden; */
 }
 
 #todo {
@@ -113,4 +118,10 @@ main {
   color: red;
   padding: 0.7rem 0.5rem;
   font-weight: 500;
+}
+.delet {
+  display: none;
+}
+.show-container {
+  visibility: visible;
 }
