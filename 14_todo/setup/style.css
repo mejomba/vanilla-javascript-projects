@@ -1,0 +1,127 @@
+@import url('https://v1.fontapi.ir/css/Sahel');
+:root {
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+
+  --transition: all 0.3s linear;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: 'Sahel', sans-serif;
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.section-center {
+  padding: 1rem;
+  background-color: var(--clr-grey-10);
+  text-align: center;
+  width: 50vw;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 0.2rem;
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+}
+.section-center:hover {
+  box-shadow: var(--dark-shadow);
+}
+.btn {
+  background: transparent;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  border: none;
+}
+
+.todo-container {
+  /* visibility: hidden; */
+}
+
+#todo {
+  border-radius: 0.1rem;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  width: 50%;
+}
+#todo:focus {
+  box-shadow: var(--light-shadow);
+}
+
+.flex-form {
+  display: flex;
+  justify-content: center;
+}
+.btn-submit {
+  padding: 0.5rem 0.25rem;
+  min-width: 2.5rem;
+  background-color: aquamarine;
+  transition: var(--transition);
+  font-weight: 700;
+}
+
+.btn-submit:hover {
+  background-color: rgb(100, 241, 194);
+  transition: var(--transition);
+}
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--clr-grey-9);
+  transition: var(--transition);
+}
+.todo-item:hover {
+  background-color: var(--clr-grey-8);
+}
+.btn-edit {
+  background-color: yellowgreen;
+  padding: 0.37rem 0.7rem;
+  color: rgb(36, 36, 36);
+  transition: var(--transition);
+}
+.btn-edit:hover {
+  background-color: rgb(104, 189, 14);
+  transition: var(--transition);
+}
+
+.btn-delet {
+  background-color: tomato;
+  padding: 0.37rem 0.7rem;
+  transition: var(--transition);
+  font-weight: 700;
+}
+.btn-delet:hover {
+  background-color: rgb(245, 63, 31);
+  transition: var(--transition);
+}
+.btn-clear {
+  color: red;
+  padding: 0.7rem 0.5rem;
+  font-weight: 500;
+}
+.delet {
+  display: none;
+}
+.show-container {
+  visibility: visible;
+}
